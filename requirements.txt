@@ -1,0 +1,4 @@
+Flask==2.1.2
+yfinance==0.1.72
+pycoingecko==2.2.0
+py-currency-converter==1.2.0

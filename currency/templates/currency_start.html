@@ -1,0 +1,16 @@
+{% extends 'template.html' %} 
+
+{% block title %}
+Валюта
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-3 mx-auto p-3 py-md-5">
+<form class="form-signin" action="{{url_for('currency.check_currency')}}" method="POST">
+    <h1 class="h2 mb-3 font-weight-normal">Конвертація долара в обрану валюту</h1><br><br>
+    <h3 class="h2 mb-3 font-weight-normal">Введiть корректний код валюти (напр. EUR)</h3><br><br>
+    <input type="text" id="currency" name="currency" class="form-control" placeholder="Назва валюти" required autofocus><br>
+    <button class="btn btn-lg btn-primary btn-block" value="submit">Продовжити</button>
+  </form>
+</div>
+{% endblock %}

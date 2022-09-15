@@ -1,0 +1,43 @@
+{% extends 'template.html' %}
+
+{% block title %}
+Головна
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">Головна</span>
+      </a>
+    </header>
+  
+    <main>
+      <h1>Почати роботу с Finance.py</h1>
+      <p class="fs-5 col-md-8">Швидко та легко переглядайте акції компаній, курс криптовалюти та курс грошової валюти.</p>
+  
+      <hr class="col-3 col-md-2 mb-5">
+  
+      <div class="row g-5">
+        <div class="col-md-6">
+          <h2>Мінімально та швидко</h2>
+          <p>Цей сайт зроблений за допомогою веб-фреймворку Flask на ЯП Python.</p>
+          <ul class="icon-list ps-0">
+            <li class="d-flex align-items-start mb-1"><a href="https://flask.palletsprojects.com/en/2.2.x/" rel="noopener" target="_blank">Оф. сайт Flask</a></li>
+            <li class="d-flex align-items-start mb-1"><a href="https://www.python.org" rel="noopener" target="_blank">Сайт Python</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6">
+          <h2>Подальші дії</h2>
+          <p>Для того, щоб скористатися функціоналом сайту, натисніть на одну з вкладок в панелі або на клікабельний текст нижче.</p>
+          <ul class="icon-list ps-0">
+            <li class="d-flex align-items-start mb-1"><a href="{{ url_for('stocks.index') }}">Акції компаній</a></li>
+            <li class="d-flex align-items-start mb-1"><a href="{{ url_for('crypto.index') }}">Курс криптовалюти</a></li>
+            <li class="d-flex align-items-start mb-1"><a href="{{ url_for('currency.index') }}">Курс грошової валюти</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

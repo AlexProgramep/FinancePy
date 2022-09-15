@@ -1,0 +1,31 @@
+{% extends 'template.html' %} 
+
+{% block title %}
+Акції компаній
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">Компанія: {{ ticker_name.info["shortName"] }}</span> 
+      </a> 
+    </header>
+  
+    <main>
+      <h1>Сайт: {{ ticker_name.info["website"] }}</h1>
+      <p class="fs-5 col-md-8">Timezone: {{ ticker_name.info["exchangeTimezoneShortName"] }}</p>
+  
+      <hr class="col-3 col-md-2 mb-5">
+  
+      <div class="row g-5">
+        <div class="col-md-6">
+          <h2>Ціна однієї акції: {{ ticker_name.info['regularMarketPrice'] }} {{ ticker_name.info['currency'] }}</h2>
+          <p><a href="/static/table.csv" download>Завантажити статистику csv файлом</a>
+            <hr class="col-3 col-md-2 mb-5">
+        </div>
+    
+      </div>
+    </main>
+  </div>
+{% endblock %}
